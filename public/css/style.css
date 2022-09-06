@@ -13,6 +13,7 @@ img{
     width: 40px;
     height: 40px;
     object-fit: cover;
+    border-radius: 4px;
 }
 .student-data-table tr {
     vertical-align: middle;
