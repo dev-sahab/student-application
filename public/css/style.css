@@ -50,3 +50,9 @@ img{
     border: 5px solid #dedede;
     margin-top: -100px;
 }
+
+@media screen and (max-width: 1366px) {
+    .full-w {
+        width: 100%
+    }
+}
