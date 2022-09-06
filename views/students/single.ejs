@@ -1,0 +1,22 @@
+<div class="cover-photo"></div>
+<section class="info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 single-pro-photo">
+                <% if (student.img == "Profile.png") { %>
+                    <img src="/images/Profile.png" alt="">
+                <% } else { %>
+                    <img src="/images/students/<%= student.img %> " alt="">
+                <% } %>
+            </div>
+            <div class="col-md-9 pt-3">
+                <h2><%= student.name %> </h2>
+                <div class="contact d-flex gap-5">
+                    <p>Mail : <%= student.mail %> </p>
+                    <span>Phone : <%= student.phone %> </span>
+                </div>
+                <p>Address : <%= student.location %> </p>
+            </div>
+        </div>
+    </div>
+</section>

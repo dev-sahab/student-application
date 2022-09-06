@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+img{
+    max-width: 100%;
+}
+.student-data-table img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.student-data-table tr {
+    vertical-align: middle;
+}
+.add-student-form img,
+.edit-student-form img {
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+.add-student-form img{
+    cursor: pointer;
+}
+.add-student-form input[type="file"] {
+	display: none;
+}
+
+/* single student profile page */
+.cover-photo{
+    padding: 160px 0;
+    background: url('/images/cover.jpg') center no-repeat ;
+    background-size: cover;
+}
+.info{
+    background: #dff9fb;
+    padding-bottom: 96px;
+    min-height: calc(100vh - 320px);
+}
+.single-pro-photo img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #dedede;
+    margin-top: -100px;
+}

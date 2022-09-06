@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card my-3 shadow add-student-form">
+                <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                    <a href="/" class="btn btn-primary">Back</a>
+                    <h4>Create Student's  Data</h4>
+                </div>
+                <div class="card-body">
+                    <form action="/student/create" method="POST" id="student_data_create" enctype="multipart/form-data">
+                        <div class="pb-3">
+                            <label>Name</label>
+                            <input type="text" class="form-control mt-2" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="pb-3">
+                            <label>E-Mail</label>
+                            <input type="text" class="form-control mt-2" name="mail" placeholder="Your E-Mail">
+                        </div>
+                        <div class="pb-3">
+                            <label>Phone</label>
+                            <input type="text" class="form-control mt-2" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="pb-3">
+                            <label>Location</label>
+                            <select name="location" class="form-control mt-2">
+                                <option value="">-select-</option>
+                                <option value="Dakha">Dakha</option>
+                                <option value="Sylhet">Sylhet</option>
+                                <option value="Chittagong">Chittagong</option>
+                                <option value="Barishal">Barishal</option>
+                                <option value="Khulna">Khulna</option>
+                                <option value="Mymensingh">Mymensingh</option>
+                                <option value="Rajshahi">Rajshahi</option>
+                                <option value="Rangpur">Rangpur</option>
+                            </select>
+                        </div>
+                        <div class="pb-3">
+                            <label>Profile Image</label>
+                            <img src="/images/add-photo.png" id="pre_photo" class="mnpmy-3">
+                            <input name="student-photo" type="file" id="add_file">
+                        </div>
+                        <div class="pb-3">
+                            <input type="submit" class="form-control btn btn-info" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
