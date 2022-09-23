@@ -42,20 +42,9 @@ const storeStudentData = async (req, res) => {
 
     const { name, mail, phone, location} = req.body;
 
-    await verficationMailSend(mail, "verify Your Account", {
+    await verficationMailSend(mail, "Verify Your Account", {
         name, mail, token, phone
     })
-
-    // sendVerifySMS(phone, `Your verification code is - ${smsToken}`);
-
-
-    // let last_id = 1;
-    // if(student.length  > 0){
-    //     last_id = student[student.length - 1 ].id + 1;
-    // }
-
-    // // create a random id
-    // const randomId = Math.floor(Math.random() * 1000000) +'_'+ Date.now();
 
     students.push({
         id :  Date.now(),

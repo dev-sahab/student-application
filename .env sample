@@ -1,0 +1,14 @@
+PORT = 
+HOST_URL = 
+
+# Email configure
+EMAIL_HOST = 
+EMAIL_PORT = 
+EMAIL_USER = 
+EMAIL_PASS = 
+
+
+# Twilio SMS Service
+SID = 
+AUTH_TOKEN = 
+NUMBER = 
