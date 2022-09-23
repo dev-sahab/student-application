@@ -1,49 +1,42 @@
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10 full-w">
+    <div class="row justify-content-center"> 
+        <div class="col-md-12 full-w mb-5">
             <div class="card shadow mt-3 rounded">
-                <div class="card-header py-3">
-                    <a href="/student/create" class="btn btn-primary">Add New Student</a>
-                </div>
-                <div class="card-body">
-                    <table class="table table-striped student-data-table py-3">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>E-Mail</th>
-                                <th>Phone</th>
-                                <th>Location</th>
-                                <th>Photo</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% student.sort((a, b) => b.id - a.id).forEach((student, index) => { %>
-                                <tr>
-                                    <td><%= index + 1 %> </td>
-                                    <td><%= student.name %></td>
-                                    <td><%= student.mail %></td>
-                                    <td><%= student.phone %></td>
-                                    <td><%= student.location %></td>
-                                    <td>
-                                        <% if (student.img == 'Profile.png') { %>
-                                            <img src="/images/<%= student.img %> " alt="">
-                                        <% } else { %>
-                                            <img src="/images/students/<%= student.img %> " alt="">
-                                        <% } %>
-                                    </td>
-                                    <td>
-                                        <a class="btn-sm btn-info" href="/student/<%= student.id %> "><i class="fas fa-eye"></i></a>
-                                        <a class="btn-sm btn-warning" href="/student/edit/<%= student.id %> "><i class="fas fa-edit"></i></a>
-                                        <a class="btn-sm btn-danger delete-btn" href="/student/delete/<%= student.id %> "><i class="fas fa-trash"></i></a>
-                                    </td>
-                                </tr>
-                            <% }) %>
-                        </tbody>
-                    </table>
+                <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                    <h3 style="margin: 0;">All Students</h3>
+                    <div class="buttons">
+                        <a href="/student/create" class="btn btn-primary">Add New Student</a>
+                        <a href="/unverified" class="btn btn-danger">Un Verified</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <% student.sort((a, b) => b.id - a.id).forEach((student, index) => { %>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <div class="verified-badge">
+                            <img src="/images/verified-bagde.png" alt="">
+                        </div>
+                        <div class="img">
+                            <% if (student.img == 'Profile.png') { %>
+                                <img src="/images/<%= student.img %> " alt="">
+                            <% } else { %>
+                                <img src="/images/students/<%= student.img %> " alt="">
+                            <% } %>
+                        </div>
+                        <div class="main-info">
+                            <div class="name mt-3">
+                                <h3><%= student.name %></h3>
+                            </div>
+                            <hr>
+                            <div class="more">
+                                <a class="btn btn-info text-light" href="/student/<%= student.id %>">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
     </div>
 </div>
